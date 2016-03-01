@@ -1,0 +1,134 @@
+html, body { 
+	margin: 0; 
+	padding: 0; 
+	width: 100%;
+	height: 100%;
+	background-image: url('img/lion.jpg'); 
+	/*position: fixed;*/
+	background-position: right;
+}
+#main_frame {
+	/*position: absolute;*/
+	/*background-color: black;*/
+	width: 824px;
+	margin: auto;
+	height: 152px;
+}
+#logo {
+	width: 646px;
+	height: 151px;
+	margin: 0 auto;
+	background-image: url('img/logo.jpg');
+}
+#lite { 
+    background-color: orange;
+    /*background-image: url("img/lite.jpg");*/
+    /*transform: scale(0.5,0.5);*/
+}
+#medium { 
+	margin-left: 206px;
+    background-color: green;
+    /*background-image: url("img/medium.jpg");*/
+    /*transform: scale(0.5,0.5);*/
+}
+#large { 
+	margin-left: 412px;
+    /*background-image: url("img/large.jpg");*/
+    background-color: black;
+    /*transform: scale(0.5,0.5);*/
+}
+#luxury { 
+	margin-left: 618px;
+    /*background-image: url("img/luxury.jpg");*/
+    background-color: red;
+    /*transform: scale(0.5,0.5);*/
+}
+#invest {
+	width: 45px;
+}
+#invest_table {
+	/*position: absolute;*/
+	top: 400px;
+	width: 800px;
+	margin: 10px;
+	/*height: 300px;*/
+	height: 50%;
+	/*background-color: grey;*/
+	border-style: solid;
+	border-color: white;
+}
+#input_style {
+	position: absolute;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+#invest_input_block {
+	font: 20px sans-serif;
+}
+.table_font {
+
+	font: 20px arial, sans-serif;
+}
+.table_block {
+	width: 150px !important;
+	height: 120px !important;
+}
+.table_colomn1 {
+	margin-left: 0px !important;
+}
+.table_colomn2 {
+	margin-left: 160px !important;
+}
+.table_colomn3 {
+	margin-left: 320px !important;
+}
+.table_colomn4 {
+	margin-left: 480px !important;
+}
+.table_colomn5 {
+	margin-left: 640px !important;
+}
+.toggle{
+	border: 3px solid blue !important;
+	/*margin: -3px !important;*/
+}
+.devideByThreeBlock {
+	position: relative;
+	font: 25px arial, serif;
+	color: white;
+
+}
+.secondFrame{
+	width: 824px;
+	height: 265px;
+	margin: auto;
+	/*background-color: orange;*/
+	padding-top: 15px;
+	color: white;
+	font: 30px arial, sans-serif;
+	font-family: "Times New Roman", Times, serif;
+}
+.backcover {
+	width: 100%;
+	height: 500px;
+	z-index: 0;
+	background-color: rgba(0,0,0,0.2);
+}
+.font_package {
+	font: 50px arial, sans-serif;
+	font-family: "Times New Roman", Times, serif;
+	color: white;
+}
+.nice_font {
+	ont-family: "Times New Roman", Times, serif;
+}
+.inline_block {
+	position: absolute;
+	/*width: 201px;*/
+	width: 201px;
+	margin: 3px;
+	padding: 0;
+	height: 302px;
+	border: 2px solid black;
+	padding: 5px;
+}
