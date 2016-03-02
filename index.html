@@ -13,6 +13,12 @@
 			<div id="logo"></div>
 		</div>
 		<div class="secondFrame">
+		<hr>
+				<span> Total Amount: </span>
+				<span id="total_amount">0$ </span>
+				<span> Total Amount Profit: </span>
+				<span id="total_amount_profit">0$ </span>
+				<hr>
 			<div>
 				<span id="package_name" class="nice_font">Investment Package: Lite</span>
 			</div>
@@ -37,11 +43,6 @@
 				<input id="submit" type="button" value="Calculate" onclick="$('#submit').click(calculate($('#invest').val()),$('#month_multiplayer').val());">
 				<input id="save_table" type="button" value="Save Calculations" onclick="$('#save_table').click(save_table());">
 				<!-- <input id="info" type="button" value="Info" onclick=""></input> -->
-				<hr>
-				<span> Total Amount: </span>
-				<span id="total_amount">0$ </span>
-				<span> Total Amount Profit: </span>
-				<span id="total_amount_profit">0$ </span>
 			</div>
 			<div id="invest_table" class="table_font">
 				<div class="inline_block table_colomn1 table_block">
