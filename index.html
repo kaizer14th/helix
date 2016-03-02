@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 	<head>
 	    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	    <link rel="stylesheet" type="text/css" href="style.css" />
@@ -65,41 +65,56 @@
 				<span>Invest
 					<span id="input_style">
 						<input type="text" name="invest" id="invest" value="50">
-						<input type="text" name="month_multiplayer" id="month_multiplayer" value="50">
-						<select>
-							<option value="1">1</option>
+						<select id="month_multiplyer">
+							<option value="12">12</option>
+							<option value="11">11</option>
+							<option value="10">10</option>
+							<option value="9">9</option>
+							<option value="8">8</option>
+							<option value="7">7</option>
+							<option value="6">6</option>
+							<option value="5">5</option>
+							<option value="4">4</option>
+							<option value="3">3</option>
 							<option value="2">2</option>
-							<option value="audi">Audi</option>
+							<option value="1">1</option>
 						</select>
-						<input id="submit" type="button" value="Submit" onclick="$('#submit').click(calculate($('#invest').val()));">
+						
+						<input id="submit" type="button" value="Submit" onclick="$('#submit').click(calculate($('#invest').val()),$('#month_multiplayer').val());">
+						<input id="save_table" type="button" value="Save Table" onclick="$('#save_table').click(save_table());">
+						<span> Total Amount: </span>
+						<span id="total_amount">0$ </span>
+						<span> Total Amount Profit: </span>
+						<span id="total_amount_profit">0$ </span>
+
 					</span>
 				</span>
 			</div>
 			<div id="invest_table" class="table_font">
 				<div class="inline_block table_colomn1 table_block">
-					<div>package</div><hr>
+					<div>Package</div><hr>
 					<div id="package_name_percent">Lite 18%</div><hr>
 					<div id="invest_money">50$</div>
 				</div>
 				<div class="inline_block table_colomn2 table_block">
-					<div>percent</div><hr>
+					<div>Percent</div><hr>
 					<div id="percent_s">16.2%($)</div><hr>
 					<div id="percent_hc">1.8%(HC)</div>
 				</div>
 				<div class="inline_block table_colomn3 table_block">
-					<div>per month</div><hr>
-					<div id="month_s">8.1$</div><hr>
-					<div id="month_hc">0.9HC</div>
+					<div>Per Month</div><hr>
+					<div id="month_s">8.10$</div><hr>
+					<div id="month_hc">0.90HC</div>
 				</div>
 				<div class="inline_block table_colomn4 table_block">
-					<div>per year</div><hr>
+					<div>Per Year</div><hr>
 					<div id="year_s">97.20$</div><hr>
 					<div id="year_hc">10.80HC</div>
 				</div>
 				<div class="inline_block table_colomn5 table_block">
-					<div>profit</div><hr>
+					<div>Profit</div><hr>
 					<div id="profit">47.20$</div><hr>
-					<div></div>
+					<div id="remove_table"></div>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,16 @@ var package_name;
 var percent;
 var percent_s;
 var percent_hc;
+var remove_amount = 0;
+var remove_amount_profit = 0;
+var table_counter = 1;
+var total_amount = 0;
+var total_amount_profit = 0;
+var total_per_month = 0;
+var array_amount = [];
+var array_amount_profit = [];
+var temp_total_amount = 97.20;
+var temp_total_amount_profit = 47.20;
 var name = 'Invest Package Lite';
 var month_multiplyer = 12;
 var percent_lite = 18;
@@ -36,11 +46,20 @@ $(document).ready(function(){
 	);
 });
 
+function check_number(z) {		//finish function
+	if (z) {
+
+	} else {
+
+	}
+}
+
 function calculate(x) {
 	x = Number(x);
-	// alert(x);
+	y = $('#month_multiplyer :selected').text();
+	// alert(y);
 	if (x < 50 || x > 25000) {
-		return alert("amount should be between 50$ and 25000$");
+		return alert("Amount should be between 50$ and 25000$ for one package deal");
 	} else if (50 <= x && x <= 199) {
 		name = package_name_lite;
 		percent = percent_lite;
@@ -64,17 +83,23 @@ function calculate(x) {
 	} else {
 
 	}
-	
+	// alert(y);
+	month_multiplyer = y;// add check function for 'y' for number or undefined
+
+
 	month_s = (x * percent_s * 0.01).toFixed(2);
 	month_hc = (x * percent_hc * 0.01).toFixed(2);
 	year_s = (month_s * month_multiplyer).toFixed(2);
 	year_hc = (month_hc * month_multiplyer).toFixed(2);
 	profit = (year_s - x).toFixed(2);
+	temp_total_amount = year_s;
+	temp_total_amount_profit = profit;
 
-	fill_table(y);
+
+	fill_table(x,y);
 }
 
-function fill_table(y) {
+function fill_table(x,y) {
 	$('#package_name_percent').html(name + " " + percent + "%");
 	$('#invest_money').html(x + "$");
 	$('#percent_s').html(percent_s + "%($)");
@@ -85,8 +110,36 @@ function fill_table(y) {
 	$('#year_hc').html(year_hc + "HC");
 	$('#profit').html(profit + "$");
 	$('#package_name').text("Invest Package " + name);
-
 }
 
+function save_table() {
+	var table = $('#invest_table');
+	$('.secondFrame').append('<div id="invest_table" class="table_font '+table_counter+'">');
+	// $('#remove_table').html('Remove Table');
+	$('.' + table_counter).append(table.html());
+	$('.' + table_counter + ' > .inline_block:nth-child(4)').addClass(table_counter + 'y');
+	$('.' + table_counter + ' > .inline_block:nth-child(5) > div:last-child').attr('onclick',"remove_table('"+table_counter+"')").html('Remove Table');;
+	array_amount[table_counter] = temp_total_amount;
+	array_amount_profit[table_counter] = temp_total_amount_profit;
+	table_counter++;
+	total_amount += Number(temp_total_amount);
+	total_amount_profit += Number(temp_total_amount_profit);
+	update_total();
+}
+
+function update_total() {
+	$('#total_amount').html(total_amount.toFixed(2) + "$");
+	$('#total_amount_profit').html(total_amount_profit.toFixed(2) + "$");
+	// body...
+}
+
+function remove_table(r) {
+	r = Number(r);
+	remove_amount = $('.' + r + ' > .table_colomn4').val();
+	total_amount -= array_amount[r];
+	total_amount_profit -= array_amount_profit[r];
+	$('.' + r).remove();
+	update_total();
+}
 
 
