@@ -8,87 +8,40 @@
 	    <title>Helix Capital</title>
 	</head>
 	<body class="body">
+		<div id="info_block"></div>
 		<div id="main_frame">
 			<div id="logo"></div>
-			<!-- <div id="lite" class="inline_block glow">
-				<div class="devideByThreeBlock">
-					<span class="font_package">Lite <br /></span>
-				</div>
-				<div class="devideByThreeBlock">
-					<span>min invest|50 <br />
-					max invest|199</span>
-				</div>
-				<div class="devideByThreeBlock">
-					<span>duration|12 month <br />
-					profit|116%</span>
-				</div>
-			</div>
-			<div id="medium" class="inline_block glow">
-				<span class="font_package">Medium</span>
-				<div class="devideByThreeBlock">
-					<span>min invest|200 <br />
-					max invest|1499</span>
-				</div>
-				<div class="devideByThreeBlock">
-					<span>duration|12 month <br />
-					profit|128%</span>
-				</div>
-			</div>
-			<div id="large" class="inline_block glow">
-				<span class="font_package">Large</span>
-				<div class="devideByThreeBlock">
-					<span>min invest|1500 <br />
-					max invest|9999</span>
-				</div>
-				<div class="devideByThreeBlock">
-					<span>duration|13 month <br />
-					profit|160%</span>
-				</div>
-			</div>
-			<div id="luxury" class="inline_block glow">
-				<span class="font_package">Luxury</span>
-				<div class="devideByThreeBlock">
-					<span>min invest|10000 <br />
-					max invest|25000</span>
-				</div>
-				<div class="devideByThreeBlock">
-					<span>duration|13 month <br />
-					profit|173%</span>
-				</div>
-			</div> -->
 		</div>
 		<div class="secondFrame">
 			<div>
-				<span id="package_name" class="nice_font">Invest Package Lite</span>
+				<span id="package_name" class="nice_font">Investment Package: Lite</span>
 			</div>
 			<div id="invest_input_block">
-				<span>Invest
-					<span id="input_style">
-						<input type="text" name="invest" id="invest" value="50">
-						<select id="month_multiplyer">
-							<option value="12">12</option>
-							<option value="11">11</option>
-							<option value="10">10</option>
-							<option value="9">9</option>
-							<option value="8">8</option>
-							<option value="7">7</option>
-							<option value="6">6</option>
-							<option value="5">5</option>
-							<option value="4">4</option>
-							<option value="3">3</option>
-							<option value="2">2</option>
-							<option value="1">1</option>
-						</select>
-						
-						<input id="submit" type="button" value="Submit" onclick="$('#submit').click(calculate($('#invest').val()),$('#month_multiplayer').val());">
-						<input id="save_table" type="button" value="Save Table" onclick="$('#save_table').click(save_table());">
-						<span> Total Amount: </span>
-						<span id="total_amount">0$ </span>
-						<span> Total Amount Profit: </span>
-						<span id="total_amount_profit">0$ </span>
-
-					</span>
-				</span>
+				<span>Investment Amount: </span>
+				<input type="text" name="invest" id="invest" value="50">
+				<span> Period Of Investment: </span>
+				<select id="month_multiplyer">
+					<option value="12">12</option>
+					<option value="11">11</option>
+					<option value="10">10</option>
+					<option value="9">9</option>
+					<option value="8">8</option>
+					<option value="7">7</option>
+					<option value="6">6</option>
+					<option value="5">5</option>
+					<option value="4">4</option>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+				</select>
+				<input id="submit" type="button" value="Calculate" onclick="$('#submit').click(calculate($('#invest').val()),$('#month_multiplayer').val());">
+				<input id="save_table" type="button" value="Save Calculations" onclick="$('#save_table').click(save_table());">
+				<!-- <input id="info" type="button" value="Info" onclick=""></input> -->
+				<hr>
+				<span> Total Amount: </span>
+				<span id="total_amount">0$ </span>
+				<span> Total Amount Profit: </span>
+				<span id="total_amount_profit">0$ </span>
 			</div>
 			<div id="invest_table" class="table_font">
 				<div class="inline_block table_colomn1 table_block">

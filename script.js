@@ -11,8 +11,7 @@ var total_per_month = 0;
 var array_amount = [];
 var array_amount_profit = [];
 var temp_total_amount = 97.20;
-var temp_total_amount_profit = 47.20;
-var name = 'Invest Package Lite';
+var temp_total_amount_profit = 47.20
 var month_multiplyer = 12;
 var percent_lite = 18;
 var percent_medium = 19;
@@ -31,33 +30,9 @@ var package_name_medium = 'Medium';
 var package_name_large = 'Large';
 var package_name_luxury = 'Luxury';
 
-$(document).ready(function(){  
-	$(".glow").hover(
-	  function () {
-	    $(this).addClass("toggle");
-	  },
-	  function () {
-	    $(this).removeClass("toggle");
-	  }
-	).click(
-		function () {
-			
-		}
-	);
-});
-
-function check_number(z) {		//finish function
-	if (z) {
-
-	} else {
-
-	}
-}
-
 function calculate(x) {
 	x = Number(x);
 	y = $('#month_multiplyer :selected').text();
-	// alert(y);
 	if (x < 50 || x > 25000) {
 		return alert("Amount should be between 50$ and 25000$ for one package deal");
 	} else if (50 <= x && x <= 199) {
@@ -81,12 +56,10 @@ function calculate(x) {
 		percent_s = percent_luxury_s;
 		percent_hc = percent_luxury_hc
 	} else {
-
+		return alert("Only numbers in this field");
 	}
-	// alert(y);
-	month_multiplyer = y;// add check function for 'y' for number or undefined
 
-
+	month_multiplyer = y;
 	month_s = (x * percent_s * 0.01).toFixed(2);
 	month_hc = (x * percent_hc * 0.01).toFixed(2);
 	year_s = (month_s * month_multiplyer).toFixed(2);
@@ -94,7 +67,6 @@ function calculate(x) {
 	profit = (year_s - x).toFixed(2);
 	temp_total_amount = year_s;
 	temp_total_amount_profit = profit;
-
 
 	fill_table(x,y);
 }
@@ -109,15 +81,13 @@ function fill_table(x,y) {
 	$('#year_s').html(year_s + "$");
 	$('#year_hc').html(year_hc + "HC");
 	$('#profit').html(profit + "$");
-	$('#package_name').text("Invest Package " + name);
+	$('#package_name').text("Investment Package: " + name);
 }
 
 function save_table() {
 	var table = $('#invest_table');
-	$('.secondFrame').append('<div id="invest_table" class="table_font '+table_counter+'">');
-	// $('#remove_table').html('Remove Table');
+	$('.secondFrame').prepend('<div id="invest_table" class="table_font '+table_counter+'">');
 	$('.' + table_counter).append(table.html());
-	$('.' + table_counter + ' > .inline_block:nth-child(4)').addClass(table_counter + 'y');
 	$('.' + table_counter + ' > .inline_block:nth-child(5) > div:last-child').attr('onclick',"remove_table('"+table_counter+"')").html('Remove Table');;
 	array_amount[table_counter] = temp_total_amount;
 	array_amount_profit[table_counter] = temp_total_amount_profit;
@@ -128,9 +98,8 @@ function save_table() {
 }
 
 function update_total() {
-	$('#total_amount').html(total_amount.toFixed(2) + "$");
-	$('#total_amount_profit').html(total_amount_profit.toFixed(2) + "$");
-	// body...
+	$('#total_amount').html(Math.abs(total_amount.toFixed(2)) + "$");
+	$('#total_amount_profit').html(Math.abs(total_amount_profit.toFixed(2)) + "$");
 }
 
 function remove_table(r) {

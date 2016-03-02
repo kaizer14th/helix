@@ -3,20 +3,12 @@ html, body {
 	padding: 0; 
 	width: 100%;
 	height: 100%;
-	background-image: url('img/lion.jpg'); 
-	/*position: fixed;*/
+	background-image: url('img/lion.jpg');
 	background-position: right;
 }
 #main_frame {
-	/*position: absolute;*/
-	/*background-color: black;*/
-	width: 824px;
-	margin: auto;
-	height: 152px;
-}
-#remove_table {
-	/*margin-left: -50px;*/
-	
+	width: 800px;
+	margin: 0 auto;
 }
 #logo {
 	width: 646px;
@@ -24,42 +16,25 @@ html, body {
 	margin: 0 auto;
 	background-image: url('img/logo.jpg');
 }
-#lite { 
-    background-color: orange;
-    /*background-image: url("img/lite.jpg");*/
-    /*transform: scale(0.5,0.5);*/
-}
-#medium { 
-	margin-left: 206px;
-    background-color: green;
-    /*background-image: url("img/medium.jpg");*/
-    /*transform: scale(0.5,0.5);*/
-}
-#large { 
-	margin-left: 412px;
-    /*background-image: url("img/large.jpg");*/
-    background-color: black;
-    /*transform: scale(0.5,0.5);*/
-}
-#luxury { 
-	margin-left: 618px;
-    /*background-image: url("img/luxury.jpg");*/
-    background-color: red;
-    /*transform: scale(0.5,0.5);*/
+#info_block {
+	position: absolute;
+	width: 560px;
+	min-width: 560px;
+	max-height: 650px;
+	color: grey;
+	margin: auto;
+	display: block;
 }
 #invest {
 	width: 45px;
 }
 #invest_table {
 	position: relative;
-	/*top: 400px;*/
 	width: 800px;
-	margin: 10px;
-	/*height: 300px;*/
+	margin-top: 10px;
 	height: 50%;
-	/*background-color: grey;*/
 	border-style: solid;
-	border-color: white;
+	border-color: #FFFFEF;
 }
 #input_style {
 	position: absolute;
@@ -69,15 +44,15 @@ html, body {
 #invest_input_block {
 	font: 20px sans-serif;
 }
+#remove_table {
+	color: #FFDEDE;
+}
 .table_font {
 	font: 20px arial, sans-serif;
 }
 .table_block {
 	width: 150px !important;
 	height: 120px !important;
-}
-.table_colomn1 {
-	margin-left: 0px !important;
 }
 .table_colomn2 {
 	margin-left: 160px !important;
@@ -91,10 +66,6 @@ html, body {
 .table_colomn5 {
 	margin-left: 640px !important;
 }
-.toggle{
-	border: 3px solid blue !important;
-	/*margin: -3px !important;*/
-}
 .devideByThreeBlock {
 	position: relative;
 	font: 25px arial, serif;
@@ -104,30 +75,19 @@ html, body {
 .secondFrame{
 	width: 824px;
 	height: 265px;
-	margin: auto;
-	/*background-color: orange;*/
+	margin: 0 auto;
 	padding-top: 15px;
-	color: white;
+	color: #FFFFF6;
 	font: 30px arial, sans-serif;
 	font-family: "Times New Roman", Times, serif;
-}
-.backcover {
-	width: 100%;
-	height: 500px;
-	z-index: 0;
-	background-color: rgba(0,0,0,0.2);
 }
 .font_package {
 	font: 50px arial, sans-serif;
 	font-family: "Times New Roman", Times, serif;
 	color: white;
 }
-.nice_font {
-	font-family: "Times New Roman", Times, serif;
-}
 .inline_block {
 	position: absolute;
-	/*width: 201px;*/
 	width: 201px;
 	margin: 3px;
 	padding: 0;
